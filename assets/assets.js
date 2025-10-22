@@ -134,14 +134,14 @@ export const productsDummyData = [
   {
     "_id": "67a1f4e43f34a77b6dde9144",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Apple AirPods Pro 2nd gen",
+    "name": "Vegan Biscuits",
     "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
     "price": 499.99,
     "offerPrice": 399.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k4dafzhwhgcn5tnoylrw.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/j212frakb8hdrhvhajhg.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/imwuugqxsajuwqpkegb5.webp",
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963095/Pulsin-Chocolate-Fudge-Peanut-Keto-Bar-50g-38092_b1d79771-1f9d-48a1-9a1e-9b65548fac8e.jpg_1_ygicx1.jpg",
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963095/Pulsin-Mint-Chocolate-and-Peanut-Keto-Bar-50g-40378_7991d224-fc05-43a3-9ca3-2760d5ef265a.jpg_mw7a4t.jpg",
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963101/Rhythm-108-Double-Chocolate-Hazelnut-Biscuit-Share-Bag-135g-26237_b1182046-3dca-4782-a6eb-a9047588c1ee.jpg_1_yzlqxd.jpg",
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k1oqaslw5tb3ebw01vvj.webp"
     ],
     "category": "Earphone",
@@ -156,7 +156,7 @@ export const productsDummyData = [
     "price": 429.99,
     "offerPrice": 329.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/m16coelz8ivkk9f0nwrz.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963094/nutrizo_shake_vpagvl.avif"
     ],
     "category": "Headphone",
     "date": 1738667310300,
@@ -170,7 +170,7 @@ export const productsDummyData = [
     "price": 899.99,
     "offerPrice": 799.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/xjd4eprpwqs7odbera1w.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963096/Purely-Plantain-Chips-Nice-Spicy-75g-28941_d00cdd76-7184-4620-abd3-cf35afc0468e.jpg_jzqccc.jpg"
     ],
     "category": "Smartphone",
     "date": 1738667366224,
@@ -184,7 +184,7 @@ export const productsDummyData = [
     "price": 399.99,
     "offerPrice": 349.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/hdfi4u3fmprazpnrnaga.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963094/nutrizo_snackss_gmguv5.avif"
     ],
     "category": "Earphone",
     "date": 1738667417511,
@@ -198,7 +198,7 @@ export const productsDummyData = [
     "price": 599.99,
     "offerPrice": 499.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/dd3l13vfoartrgbvkkh5.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963095/Other-Foods-Crunchy-Shiitake-Mushroom-Chips-40g-30623_fbc719a2-5679-43f8-b018-01f310865722.jpg_ba646g.jpg"
     ],
     "category": "Accessories",
     "date": 1738667503075,
@@ -212,7 +212,7 @@ export const productsDummyData = [
     "price": 4199.99,
     "offerPrice": 3899.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/r5h370zuujvrw461c6wy.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963103/ER_LENTIL_S_95g_Sharing_PPTREADY_NEW.jpg_-_Copy_k6decu.jpg"
     ],
     "category": "Camera",
     "date": 1738667788883,
@@ -226,7 +226,7 @@ export const productsDummyData = [
     "price": 2799.99,
     "offerPrice": 2499.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/rzri7kytphxalrm9rubd.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963507/fruit_snack_nutizo_-_Copy_abkiwa.avif"
     ],
     "category": "Laptop",
     "date": 1738667977644,
@@ -240,7 +240,7 @@ export const productsDummyData = [
     "price": 349.99,
     "offerPrice": 299.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/e3zjaupyumdkladmytke.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963514/MiN_6oz_Apricot_Render_2d86b313-f39d-44a6-9373-19dd9cab93d8_400x_-_Copy_d2vjwz.png"
     ],
     "category": "Earphone",
     "date": 1738668086331,
@@ -254,7 +254,7 @@ export const productsDummyData = [
     "price": 1699.99,
     "offerPrice": 1499.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963514/MiN_7oz_Smyrna_Figs_Render_FOP_400x_-_Copy_q2m72e.png"
     ],
     "category": "Accessories",
     "date": 1738668126660,
@@ -268,7 +268,7 @@ export const productsDummyData = [
     "price": 2199.99,
     "offerPrice": 1999.99,
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
+      "https://res.cloudinary.com/dmlavu7is/image/upload/v1760963534/MiN_12oz-Cranberry_Render_-_Copy_kfdz4p.png"
     ],
     "category": "Laptop",
     "date": 1738668619198,
