@@ -10,9 +10,9 @@ const ProductCard = ({ product }) => {
     return (
         <div
             onClick={() => { router.push('/product/' + product._id); scrollTo(0, 0) }}
-            className="flex flex-col items-start gap-0.5 max-w-[200px] w-full cursor-pointer"
+            className="flex flex-col items-start gap-0.5 max-w-[280px] w-full cursor-pointer rounded-lg border border-border-color hover:shadow-lg hover:-translate-y-2 hover:border-primary hover:scale-105 transition-all duration-300 p-4"
         >
-            <div className="cursor-pointer group relative bg-gray-500/10 rounded-lg w-full h-52 flex items-center justify-center">
+            <div className="cursor-pointer group relative bg-background rounded-lg w-full h-64 flex items-center justify-center overflow-hidden">
                 <Image
                     src={product.image[0]}
                     alt={product.name}
@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
                     width={800}
                     height={800}
                 />
-                <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
+                <button className="absolute top-2 right-2 bg-background p-2 rounded-full shadow-md">
                     <Image
                         className="h-3 w-3"
                         src={assets.heart_icon}
@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
 
             <div className="flex items-end justify-between w-full mt-1">
                 <p className="text-base font-medium">{currency}{product.offerPrice}</p>
-                <button className=" max-sm:hidden px-4 py-1.5 text-gray-500 border border-gray-500/20 rounded-full text-xs hover:bg-slate-50 transition">
+                <button className=" max-sm:hidden px-4 py-2 text-text-secondary border border-border-color rounded-lg text-xs font-medium hover:bg-accent hover:text-text-primary hover:shadow-md transition-all duration-200">
                     Buy now
                 </button>
             </div>
