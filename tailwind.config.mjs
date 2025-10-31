@@ -8,8 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+       'primary': '#3A8E54',
+        'accent': '#F9A825',
+        'background': '#FDFCFB',
+        'text-primary': '#2D3748',
+        'text-secondary': '#4A5568',
+        'border-color': '#E2E8F0',
       },
       gridTemplateColumns:{
         'auto': 'repeat(auto-fit, minmax(200px, 1fr))'

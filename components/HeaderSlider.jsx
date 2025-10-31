@@ -57,15 +57,15 @@ const HeaderSlider = () => {
         {sliderData.map((slide, index) => (
           <div
             key={slide.id}
-            className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#E6E9F2] py-8 md:px-14 px-5 sm:mt-2 h-[80vh] min-w-full"
+            className="flex flex-col-reverse md:flex-row items-center justify-between bg-background py-8 md:px-14 px-5 h-[80vh] min-w-full"
           >
-            <div className="md:pl-8 mt-10 md:mt-0">
-              <p className="md:text-base text-green-600 pb-2">{slide.offer}</p>
-              <h1 className={`${josefinSans.className} max-w-lg md:text-[75px] md:leading-[68px] text-2xl font-semibold`}>
+           <div className={`md:pl-8 mt-10 md:mt-0 transition-all duration-1000 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
+              <p className={`md:text-base text-primary pb-2 transition-all duration-1000 delay-200 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>{slide.offer}</p>
+              <h1 className={`${josefinSans.className} max-w-lg md:text-[75px] md:leading-[68px] text-2xl font-semibold transition-all duration-1000 delay-300 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
                 {slide.title}
               </h1>
-              <div className="flex items-center mt-4 md:mt-6 ">
-                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-green-600 rounded-full text-white font-medium">
+              <div className={`flex items-center mt-4 md:mt-6 transition-all duration-1000 delay-500 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
+                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-primary rounded-full text-white font-medium">
                   {slide.buttonText1}
                 </button>
                 <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">
@@ -74,7 +74,7 @@ const HeaderSlider = () => {
                 </button>
               </div>
             </div>
-            <div className="flex items-center flex-1 justify-center">
+           <div className={`flex items-center flex-1 justify-center transition-all duration-1000 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
               <Image
                 className="md:w-72 w-48"
                 src={slide.imgSrc}
@@ -91,7 +91,7 @@ const HeaderSlider = () => {
             key={index}
             onClick={() => handleSlideChange(index)}
             className={`h-2 w-2 rounded-full cursor-pointer ${
-              currentSlide === index ? "bg-orange-600" : "bg-gray-500/30"
+                  currentSlide === index ? "bg-accent" : "bg-gray-500/30"
             }`}
           ></div>
         ))}

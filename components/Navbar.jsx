@@ -12,7 +12,7 @@ const Navbar = () => {
   const {openSignIn} = useClerk()
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
+    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-border-color text-text-primary bg-background">
       <Image
         className="cursor-pointer w-28 md:w-32"
         onClick={() => router.push('/')}
@@ -20,20 +20,19 @@ const Navbar = () => {
         alt="logo"
       />
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/" className="hover:text-primary transition">
           Home
         </Link>
-        <Link href="/all-products" className="hover:text-gray-900 transition">
+        <Link href="/all-products" className="hover:text-primary transition">
           Shop
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/" className="hover:text-primary transition">
           About Us
         </Link>
-        <Link href="/" className="hover:text-gray-900 transition">
+        <Link href="/" className="hover:text-primary transition">
           Contact
         </Link>
-
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
+    {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-colors">Seller Dashboard</button>}
 
       </div>
 
@@ -52,14 +51,14 @@ const Navbar = () => {
           </UserButton>
           </> 
         
-        : <button onClick={openSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
+        :  <button onClick={openSignIn} className="flex items-center gap-2 hover:text-primary transition">
           <Image src={assets.user_icon} alt="user icon" />
           Account
         </button>}
       </ul>
 
       <div className="flex items-center md:hidden gap-3">
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
+         {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-colors">Seller Dashboard</button>}
          {user
         ? <>
           <UserButton>
@@ -73,7 +72,7 @@ const Navbar = () => {
             </UserButton.MenuItems>
 
             <UserButton.MenuItems>
-              <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={()=> router.push('/cart')}/>
+              <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={()=> router.push('/cart' )}/>
             </UserButton.MenuItems>
 
              <UserButton.MenuItems>
@@ -82,7 +81,7 @@ const Navbar = () => {
           </UserButton>
           </> 
         
-        : <button onClick={openSignIn} className="flex items-center gap-2 hover:text-gray-900 transition">
+       : <button onClick={openSignIn} className="flex items-center gap-2 hover:text-primary transition">
           <Image src={assets.user_icon} alt="user icon" />
           Account
         </button>}
