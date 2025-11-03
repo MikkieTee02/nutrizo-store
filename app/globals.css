@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles for organic theme */
+body {
+  background-color: theme('colors.background');
+  color: theme('colors.text-primary');
+}
+
+.btn-primary {
+  @apply bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary-dark transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-secondary/90 transition-colors duration-200;
+}
+
+.btn-accent {
+  @apply bg-accent text-white font-semibold py-2 px-4 rounded-lg hover:bg-accent-light transition-colors duration-200;
+}
+
+.card {
+  @apply bg-surface border border-border-color rounded-lg shadow-sm;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, theme('colors.primary'), theme('colors.secondary'));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 * {
     scroll-behavior: smooth;
 }

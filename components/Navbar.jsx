@@ -32,7 +32,7 @@ const Navbar = () => {
         <Link href="/" className="hover:text-primary transition-colors duration-200 font-medium">
           Contact
         </Link>
-    {isSeller && <button onClick={() => router.push('/seller')} className="text-sm border px-5 py-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 font-medium">Seller Dashboard</button>}
+    {isSeller && <button onClick={() => router.push('/seller')} className="text-sm border px-5 py-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 font-semibold">Seller Dashboard</button>}
 
       </div>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center md:hidden gap-3">
-         {isSeller && <button onClick={() => router.push('/seller')} className="text-sm border px-5 py-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 font-medium">Seller Dashboard</button>}
+         {isSeller && <button onClick={() => router.push('/seller')} className="text-sm border px-5 py-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 font-semibold">Seller Dashboard</button>}
          {user
         ? <>
           <UserButton>

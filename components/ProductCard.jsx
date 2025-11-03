@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
 
             <div className="flex items-end justify-between w-full mt-1">
                 <p className="text-base font-medium">{currency}{product.offerPrice}</p>
-                <button className=" max-sm:hidden px-4 py-2 text-text-secondary border border-border-color rounded-lg text-xs font-medium hover:bg-accent hover:text-text-primary hover:shadow-md transition-all duration-200">
+                <button className=" max-sm:hidden px-4 py-2 text-text-secondary border border-border-color rounded-lg text-xs font-semibold hover:bg-accent hover:text-white hover:shadow-md transition-all duration-200">
                     Buy now
                 </button>
             </div>

@@ -20,7 +20,7 @@ import heart_icon from "./heart_icon.svg";
 import star_icon from "./star_icon.svg";
 import redirect_icon from "./redirect_icon.svg";
 import star_dull_icon from "./star_dull_icon.svg";
-import header_headphone_image from "./orange-juice.png";
+import header_headphone_image from "./mango-fruit-splash.png";
 import header_playstation_image from "./bottles-hero.png";
 import header_macbook_image from "./holistic-wellness.png";
 import macbook_image from "./macbook_image.png";
