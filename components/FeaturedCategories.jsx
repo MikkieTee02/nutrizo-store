@@ -1,13 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaGlassMartini, FaLeaf } from 'react-icons/fa';
+import { GiChipsBag, GiPowder } from 'react-icons/gi';
+import { MdOutlineIcecream } from 'react-icons/md';
+import { MdOutlineNoFood } from "react-icons/md";
 
 const categories = [
-  { name: 'Juices', icon: 'https://res.cloudinary.com/dmlavu7is/image/upload/v1720779743/flour_h2a5na.png' },
-  { name: 'Energy Bars', icon: 'https://res.cloudinary.com/dmlavu7is/image/upload/v1720779743/fruits_u81qak.png' },
-  { name: 'Chips', icon: 'https://res.cloudinary.com/dmlavu7is/image/upload/v1720779743/jam_v3a9ha.png' },
-  { name: 'Fruit Snacks', icon: 'https://res.cloudinary.com/dmlavu7is/image/upload/v1720779743/meat_t5sloo.png' },
-  { name: 'Powder', icon: 'https://res.cloudinary.com/dmlavu7is/image/upload/v1720779743/milk_eggs_n7fcdz.png' },
-  { name: 'Vegetables', icon: 'https://res.cloudinary.com/dmlavu7is/image/upload/v1720779743/vegetables_y9v6qj.png' },
+  { name: 'Juices', icon: <FaGlassMartini />, color: 'bg-orange-200' },
+  { name: 'Energy Bars', icon:<MdOutlineNoFood />, color: 'bg-amber-200' },
+  { name: 'Chips', icon: <GiChipsBag />, color: 'bg-yellow-200' },
+  { name: 'Fruit Snacks', icon: <MdOutlineIcecream />, color: 'bg-pink-200' },
+  { name: 'Powder', icon: <GiPowder />, color: 'bg-blue-200' },
+  { name: 'Vegetables', icon: <FaLeaf />, color: 'bg-green-200' },
 ];
 
 const FeaturedCategories = () => {
@@ -31,8 +35,8 @@ const FeaturedCategories = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="relative inline-block">
-                <div className='w-32 h-32 rounded-full p-4 bg-gray-200/50 flex justify-center items-center'>
-                  <img src={category.icon} alt={category.name} className="w-20 h-20 object-contain" />
+                <div className={`w-32 h-32 rounded-full p-4 ${category.color} flex justify-center items-center`}>
+                  <div className="text-4xl text-gray-700">{category.icon}</div>
                 </div>
               </div>
               <h4 className="mt-4 text-lg font-semibold text-text-primary">{category.name}</h4>

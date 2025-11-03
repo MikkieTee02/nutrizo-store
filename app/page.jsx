@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import FeaturedCategories from '@/components/FeaturedCategories';
+import BentoGridBanner from '@/components/BentoGridBanner';
 
 const Home = () => {
   return (
@@ -17,8 +18,9 @@ const Home = () => {
       <HeaderSlider />
       <div className="px-6 md:px-16 lg:px-20">
         <FeaturedCategories />
+        <AboutUs />
          <HomeProducts />
-         <AboutUs />
+         <BentoGridBanner />
         <FeaturedProduct />
         <Banner />
         <NewsLetter />

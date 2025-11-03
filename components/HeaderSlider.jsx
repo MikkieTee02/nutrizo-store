@@ -64,7 +64,7 @@ const HeaderSlider = () => {
               <h1 className={`${josefinSans.className} max-w-lg md:text-[75px] md:leading-[68px] text-2xl font-semibold text-primary-dark transition-all duration-1000 delay-300 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
                 {slide.title}
               </h1>
-                  <p className={`md:text-base  pb-4 transition-all duration-1000 delay-200 md:w-96 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>{slide.description}</p>
+                  <p className={`md:text-md  pb-4 transition-all duration-1000 delay-200 md:w-96 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>{slide.description}</p>
               <div className={`flex items-center mt-4 md:mt-5 gap-4 transition-all duration-1000 delay-500 ${currentSlide === index ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
                 <button className="md:px-12 px-8 md:py-3 py-2.5 bg-primary rounded-lg text-white font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg">
                   {slide.buttonText1}
