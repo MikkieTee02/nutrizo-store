@@ -78,20 +78,18 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex space-x-4 mb-4 md:mb-0">
+          <div className="flex space-x-4 mb-4 ">
             <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
             <a href="#" className="text-gray-400 hover:text-white"><FaTwitter /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaGooglePlusG /></a>
+          
             <a href="#" className="text-gray-400 hover:text-white"><FaInstagram /></a>
             <a href="#" className="text-gray-400 hover:text-white"><FaPinterest /></a>
           </div>
-          <div className="text-gray-500 text-sm mb-4 md:mb-0">
+          <div className="text-gray-500 text-sm mb-4 md:mb-4">
             Mikaela Nyamasoka. Copyright © 2025
           </div>
           <div className="flex items-center space-x-2">
-            <img src="https://res.cloudinary.com/dmlavu7is/image/upload/v1720782358/skrill_x33hld.png" alt="Skrill" className="h-6" />
             <img src="https://res.cloudinary.com/dmlavu7is/image/upload/v1720782358/bitcoin_g22gmq.png" alt="Bitcoin" className="h-6" />
-            <img src="https://res.cloudinary.com/dmlavu7is/image/upload/v1720782358/amex_b1uylx.png" alt="American Express" className="h-6" />
             <img src="https://res.cloudinary.com/dmlavu7is/image/upload/v1720782358/paypal_jwxttr.png" alt="PayPal" className="h-6" />
             <img src="https://res.cloudinary.com/dmlavu7is/image/upload/v1720782358/mastercard_ftlxk4.png" alt="Mastercard" className="h-6" />
             <img src="https://res.cloudinary.com/dmlavu7is/image/upload/v1720782358/visa_sm3ymi.png" alt="Visa" className="h-6" />

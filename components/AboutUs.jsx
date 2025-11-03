@@ -41,6 +41,14 @@ const AboutUs = () => {
               will be distracted by the readable content of a page when looking
               at.
             </p>
+
+              <p className="text-text-secondary mb-6">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is a long established fact that a reader
+              will be distracted by the readable content of a page when looking
+              at.
+            </p>
             <button className="bg-accent text-white font-semibold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
               About More
             </button>
