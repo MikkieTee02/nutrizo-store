@@ -15,7 +15,7 @@ const BentoGridBanner = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
           <motion.div
-            className="bg-surface border border-border-color rounded-lg p-8 shadow-sm"
+            className="bg-green-200 border border-border-color rounded-lg p-8 shadow-sm"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ const BentoGridBanner = () => {
 
           {/* Card 2 */}
           <motion.div
-            className="bg-surface border border-border-color rounded-lg p-8 shadow-sm"
+            className="bg-orange-200 border border-border-color rounded-lg p-8 shadow-sm"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -55,7 +55,7 @@ const BentoGridBanner = () => {
 
           {/* Card 3 */}
           <motion.div
-            className="bg-surface border border-border-color rounded-lg p-8 shadow-sm"
+            className="bg-red-200 border border-border-color rounded-lg p-8 shadow-sm"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}

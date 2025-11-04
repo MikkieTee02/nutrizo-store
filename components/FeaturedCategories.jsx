@@ -9,7 +9,7 @@ const categories = [
   { name: 'Juices', icon: <FaGlassMartini />, color: 'bg-orange-200' },
   { name: 'Energy Bars', icon:<MdOutlineNoFood />, color: 'bg-amber-200' },
   { name: 'Chips', icon: <GiChipsBag />, color: 'bg-yellow-200' },
-  { name: 'Fruit Snacks', icon: <MdOutlineIcecream />, color: 'bg-pink-200' },
+  { name: 'Fruit Snacks', icon: <MdOutlineIcecream />, color: 'bg-red-200' },
   { name: 'Powder', icon: <GiPowder />, color: 'bg-blue-200' },
   { name: 'Vegetables', icon: <FaLeaf />, color: 'bg-green-200' },
 ];
