@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import FeaturedCategories from '@/components/FeaturedCategories';
 import BentoGridBanner from '@/components/BentoGridBanner';
+import Gallery from "@/components/Gallery";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
         <Banner />
         <NewsLetter />
       </div>
+       <Gallery/>
       <Footer />
     </>
   );
