@@ -17,12 +17,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-800 text-white pt-16">
+    <footer className="bg-primary-dark/100 text-white pt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className='lg:col-span-2'>
             <h3 className="text-xl font-bold mb-4">JOIN OUR NEWSLETTER</h3>
-            <p className="text-gray-400 mb-4">Sign up for our e-mail to get the latest news.</p>
+            <p className="text-gray-200 mb-4">Sign up for our e-mail to get the latest news.</p>
             <div className="flex w-full md:w-96">
               <input
                 type="email"
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">ABOUT US</h3>
-            <ul className="text-gray-400 space-y-2">
+            <ul className="text-gray-200 space-y-2">
               <li className="flex items-center">
                 <span>M-F 9am-5pm EST</span>
               </li>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">INFORMATION</h3>
-            <ul className="text-gray-400 space-y-2">
+            <ul className="text-gray-200 space-y-2">
               <li><a href="#" className="hover:text-white">About Us</a></li>
               <li><a href="#" className="hover:text-white">Delivery Information</a></li>
               <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">CUSTOMER SERVICE</h3>
-            <ul className="text-gray-400 space-y-2">
+            <ul className="text-gray-200 space-y-2">
               <li><a href="#" className="hover:text-white">Site Map</a></li>
               <li><a href="#" className="hover:text-white">Wish List</a></li>
               <li><a href="#" className="hover:text-white">Brands</a></li>
@@ -77,15 +77,15 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-400 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 ">
-            <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitter /></a>
+            <a href="#" className="text-gray-200 hover:text-white"><FaFacebookF /></a>
+            <a href="#" className="text-gray-200 hover:text-white"><FaTwitter /></a>
           
-            <a href="#" className="text-gray-400 hover:text-white"><FaInstagram /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaPinterest /></a>
+            <a href="#" className="text-gray-200 hover:text-white"><FaInstagram /></a>
+            <a href="#" className="text-gray-200 hover:text-white"><FaPinterest /></a>
           </div>
-          <div className="text-gray-500 text-sm mb-4 md:mb-4">
+          <div className="text-gray-300 text-sm mb-4 md:mb-4">
             Mikaela Nyamasoka. Copyright © 2025
           </div>
           <div className="flex items-center space-x-2">
