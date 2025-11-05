@@ -12,6 +12,7 @@ import FeaturedCategories from '@/components/FeaturedCategories';
 import BentoGridBanner from '@/components/BentoGridBanner';
 import Gallery from "@/components/Gallery";
 
+
 const Home = () => {
   return (
     <>
@@ -23,9 +24,10 @@ const Home = () => {
          <HomeProducts />
          <BentoGridBanner />
         <FeaturedProduct />
+           </div>
         <Banner />
         <NewsLetter />
-      </div>
+   
        <Gallery/>
       <Footer />
     </>
@@ -33,3 +35,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -35,8 +35,8 @@ const FeaturedCategories = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="relative inline-block">
-                <div className={`w-32 h-32 rounded-full p-4 ${category.color} flex justify-center items-center`}>
-                  <div className="text-4xl text-gray-700">{category.icon}</div>
+                <div className={`w-32 h-32 rounded-full p-4 ${category.color} flex justify-center items-center group`}>
+                  <div className="text-4xl text-gray-700 group-hover:scale-125 transition-transform duration-300">{category.icon}</div>
                 </div>
               </div>
               <h4 className="mt-4 text-lg font-semibold text-text-primary">{category.name}</h4>
