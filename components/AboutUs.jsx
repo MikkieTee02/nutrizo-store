@@ -20,7 +20,7 @@ const AboutUs = () => {
             <Image
               src={orangeJuice}
               alt="Orange Juice"
-              className="relative mx-auto w-3/4"
+              className="relative mx-auto w-3/4 animate-pulse"
             />
           </motion.div>
           <motion.div
