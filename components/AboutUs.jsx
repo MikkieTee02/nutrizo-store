@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <div className="relative mt-10 py-10 overflow-hidden rounded-lg">
+    <div className="relative mt-14 py-10 overflow-hidden rounded-lg">
       <div className="absolute top-0 left-0 w-full h-full bg-green-100 "></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
             className="relative"
           >
             <div className="absolute inset-0 bg-primary/100 rounded-full transform scale-75 "></div>
@@ -26,7 +26,7 @@ const AboutUs = () => {
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
           >
             <div className="text-start mb-12">
               <h2 className="text-3xl font-bold text-text-primary">About Us</h2>
