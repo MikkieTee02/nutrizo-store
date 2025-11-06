@@ -16,7 +16,7 @@ export async function GET(request) {
 
         await connectDB()
 
-        const products = await Product.find({})
+        const products = await Product.find({userId})
         return NextResponse.json({success:true, products})
     } catch (error) {
         return NextResponse.json({success:false, message: error.message})

@@ -1,14 +1,16 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { useParams } from "next/navigation";
 
-const AddProduct = () => {
+const EditProduct = () => {
 
-  const {getToken} = useAppContext()
+  const {getToken, router} = useAppContext()
+  const { id } = useParams()
 
   const [files, setFiles] = useState([]);
   const [name, setName] = useState('');
@@ -16,6 +18,36 @@ const AddProduct = () => {
   const [category, setCategory] = useState('Earphone');
   const [price, setPrice] = useState('');
   const [offerPrice, setOfferPrice] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  const fetchProduct = async () => {
+    try {
+      const token = await getToken()
+      const {data} = await axios.get('/api/product/seller-list', {headers: {Authorization: `Bearer ${token}`}})
+      if (data.success) {
+        const product = data.products.find(p => p._id === id);
+        if (product) {
+          setName(product.name);
+          setDescription(product.description);
+          setCategory(product.category);
+          setPrice(product.price);
+          setOfferPrice(product.offerPrice);
+          // For images, we can show existing ones, but for editing, we'll allow uploading new ones
+          setLoading(false);
+        } else {
+          toast.error('Product not found');
+        }
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  }
+
+  useEffect(() => {
+    fetchProduct();
+  }, [id])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,19 +65,14 @@ const AddProduct = () => {
     }
 
     try {
-      
+
       const token = await getToken()
 
-      const {data} = await axios.post('/api/product/add', formData, {headers: {Authorization: `Bearer ${token}`}})
+      const {data} = await axios.put(`/api/product/update/${id}`, formData, {headers: {Authorization: `Bearer ${token}`}})
 
       if (data.success) {
         toast.success(data.message)
-        setFiles([]);
-        setName('');
-        setDescription('');
-        setCategory('Earphone');
-        setPrice('');
-        setOfferPrice('');
+        router.push('/seller/product-list')
       } else{
         toast.error(data.message);
       }
@@ -53,10 +80,11 @@ const AddProduct = () => {
     } catch (error) {
       toast.error(error.message)
     }
-
-    
-
   };
+
+  if (loading) {
+    return <div className="flex-1 min-h-screen flex items-center justify-center">Loading...</div>
+  }
 
   return (
     <div className="flex-1 min-h-screen flex flex-col justify-between">
@@ -125,7 +153,7 @@ const AddProduct = () => {
               id="category"
               className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40"
               onChange={(e) => setCategory(e.target.value)}
-              defaultValue={category}
+              value={category}
             >
               <option value="Energy Bars">Energy Bars</option>
               <option value="Beverages">Beverages</option>
@@ -166,7 +194,7 @@ const AddProduct = () => {
           </div>
         </div>
         <button type="submit" className="px-8 py-2.5 bg-accent text-white font-semibold rounded-lg">
-          ADD
+          UPDATE
         </button>
       </form>
       {/* <Footer /> */}
@@ -174,4 +202,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default EditProduct;
