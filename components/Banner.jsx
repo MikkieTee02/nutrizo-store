@@ -24,7 +24,7 @@ const Banner = () => {
           Organic Only
         </h2>
         <p className="max-w-[450px] font-medium text-2xl text-text-secondary">
-          We supply hight quality organic product
+          We supply high quality organic product
         </p>
 
         <p className="max-w-[343px]  text-text-secondary">

@@ -77,7 +77,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-400 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-400 mt-4 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 ">
             <a href="#" className="text-gray-200 hover:text-white"><FaFacebookF /></a>
             <a href="#" className="text-gray-200 hover:text-white"><FaTwitter /></a>
