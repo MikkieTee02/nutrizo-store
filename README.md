@@ -1,18 +1,23 @@
-# QuickCart - A simple eCommerce website
+# Nutrizo - A modern eCommerce platform
 
-QuickCart is an open-source **Next.js eCommerce frontend** project.  
-It provides a modern, fast and customizable shopping UI.  
-This repo is **frontend only** – contributors can improve the design, add new pages, animations and more.
+Nutrizo is a full-stack **Next.js eCommerce application** built with modern technologies.
+It provides a complete shopping experience with seller dashboards, product management, user authentication, and order processing.
+This repo includes both frontend and backend – contributors can improve features, add new functionalities, enhance UI/UX, and more.
 
 ---
 
 ## Features
 
--   Built with **Next.js + Tailwind CSS**
+-   Built with **Next.js + Tailwind CSS + MongoDB**
+-   User authentication with Clerk
+-   Seller dashboard for product management
+-   Shopping cart and order processing
+-   Product search and filtering
 -   Responsive design
 -   Reusable components
--   Customizable layouts and colors
--   Open for contributions (UI/UX, animations, themes, layouts etc.)
+-   Image uploads with Cloudinary
+-   Real-time notifications with Inngest
+-   Open for contributions (features, UI/UX, backend improvements, etc.)
 
 ---
 
@@ -21,8 +26,8 @@ This repo is **frontend only** – contributors can improve the design, add new 
 1. Clone the repo
 
     ```bash
-    git clone https://github.com/GreatStackDev/QuickCart.git
-    cd QuickCart
+    git clone https://github.com/your-username/Nutrizo.git
+    cd Nutrizo
     ```
 
 2. Install dependencies
@@ -31,7 +36,20 @@ This repo is **frontend only** – contributors can improve the design, add new 
     npm install
     ```
 
-3. Run locally
+3. Set up environment variables
+
+    Create a `.env.local` file and add your configuration:
+
+    ```env
+    MONGODB_URI=your_mongodb_connection_string
+    CLERK_SECRET_KEY=your_clerk_secret_key
+    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+    CLOUDINARY_API_KEY=your_cloudinary_api_key
+    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+    INNGEST_SIGNING_KEY=your_inngest_signing_key
+    ```
+
+4. Run locally
 
     ```bash
     npm run dev
@@ -43,16 +61,19 @@ This repo is **frontend only** – contributors can improve the design, add new 
 
 We welcome all kinds of contributions! You can:
 
-- Create new pages
-- Improve layouts
+- Add new features (payment integration, reviews, etc.)
+- Improve backend APIs
+- Create new pages and components
+- Improve layouts and UI/UX
 - Add animations and transitions
 - Enhance responsiveness
-- Refactor components
-- Suggest new UI/UX ideas
+- Refactor components and code
+- Suggest new features and ideas
 - Add themes or color variations
 - Introduce accessibility improvements
 - Add filtering/search features
 - Improve documentation
+- Fix bugs and issues
 
 Check out [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
@@ -66,4 +87,4 @@ This project is licensed under the **MIT License**.
 
 ## 🌟 Contributors
 
-Thanks to everyone who contributes to **QuickCart**!
+Thanks to everyone who contributes to **Nutrizo**!
