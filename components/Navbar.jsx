@@ -12,7 +12,7 @@ const Navbar = () => {
   const {openSignIn} = useClerk()
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3  text-text-primary bg-background">
+    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-28` py-3  text-text-primary bg-background">
       <Image
         className="cursor-pointer w-28 md:w-32"
         onClick={() => router.push('/')}
@@ -40,6 +40,13 @@ const Navbar = () => {
         <Image className="w-5 h-5  cursor-pointer hover:scale-110 transition-transform duration-200" src={assets.search_icon} alt="search icon" />
         {user
         ? <>
+          {!isSeller && (
+            <div 
+            className="flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+              <Image src={assets.heart_icon} alt="heart icon" className="w-4 h-4" />
+              Customer
+            </div>
+          )}
           <UserButton>
             <UserButton.MenuItems>
               <UserButton.Action label="Cart" labelIcon={<CartIcon/>} onClick={()=> router.push('/cart')}/>
@@ -49,8 +56,8 @@ const Navbar = () => {
               <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={()=> router.push('/my-orders')}/>
             </UserButton.MenuItems>
           </UserButton>
-          </> 
-        
+          </>
+
         :  <button onClick={openSignIn} className="flex items-center gap-3 hover:text-primary transition-colors duration-200 font-medium">
           <Image src={assets.user_icon} alt="user icon" />
           Account
@@ -61,6 +68,12 @@ const Navbar = () => {
          {isSeller && <button onClick={() => router.push('/seller')} className="text-sm border px-5 py-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 font-semibold">Seller Dashboard</button>}
          {user
         ? <>
+          {!isSeller && (
+            <div className="flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+              <Image src={assets.heart_icon} alt="heart icon" className="w-4 h-4" />
+              Customer
+            </div>
+          )}
           <UserButton>
 
              <UserButton.MenuItems>
@@ -79,8 +92,8 @@ const Navbar = () => {
               <UserButton.Action label="My Orders" labelIcon={<BagIcon/>} onClick={()=> router.push('/my-orders')}/>
             </UserButton.MenuItems>
           </UserButton>
-          </> 
-        
+          </>
+
        : <button onClick={openSignIn} className="flex items-center gap-3 hover:text-primary transition-colors duration-200 font-medium">
           <Image src={assets.user_icon} alt="user icon" />
           Account
