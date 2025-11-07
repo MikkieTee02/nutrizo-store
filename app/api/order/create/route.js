@@ -3,6 +3,7 @@ import Product from "@/models/Product";
 import User from "@/models/User";
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
+import authSeller from "@/lib/authSeller";
 
 
 
@@ -11,6 +12,11 @@ export async function POST(request) {
 
         const {userId} = getAuth(request)
         const {address, items} = await request.json();
+
+        const isSeller = await authSeller(userId)
+        if (isSeller) {
+            return NextResponse.json({success:false, message: 'Sellers cannot place orders'});
+        }
 
         if (!address || items.length === 0) {
             return NextResponse.json({success:false, message: 'Invalid data'});

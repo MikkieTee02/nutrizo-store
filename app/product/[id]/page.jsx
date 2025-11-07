@@ -14,7 +14,7 @@ const Product = () => {
 
     const { id } = useParams();
 
-    const { products, router, addToCart } = useAppContext()
+    const { products, router, addToCart, isSeller } = useAppContext()
 
     const [mainImage, setMainImage] = useState(null);
     const [productData, setProductData] = useState(null);
@@ -112,14 +112,16 @@ const Product = () => {
                         </table>
                     </div>
 
-                    <div className="flex items-center mt-10 gap-4">
-                        <button onClick={() => addToCart(productData._id)} className="w-full py-3.5 bg-surface text-text-primary hover:bg-border-color transition rounded-lg font-semibold">
-                            Add to Cart
-                        </button>
-                        <button onClick={() => { addToCart(productData._id); router.push('/cart') }} className="w-full py-3.5 bg-accent text-white hover:bg-accent-light transition rounded-lg font-semibold">
-                            Buy now
-                        </button>
-                    </div>
+                    {!isSeller && (
+                        <div className="flex items-center mt-10 gap-4">
+                            <button onClick={() => addToCart(productData._id)} className="w-full py-3.5 bg-surface text-text-primary hover:bg-border-color transition rounded-lg font-semibold">
+                                Add to Cart
+                            </button>
+                            <button onClick={() => { addToCart(productData._id); router.push('/cart') }} className="w-full py-3.5 bg-accent text-white hover:bg-accent-light transition rounded-lg font-semibold">
+                                Buy now
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
             <div className="flex flex-col items-center">

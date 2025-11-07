@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const OrderSummary = () => {
 
-  const { currency, router, getCartCount, getCartAmount, getToken, user, cartItems, setCartItems } = useAppContext()
+  const { currency, router, getCartCount, getCartAmount, getToken, user, cartItems, setCartItems, isSeller } = useAppContext()
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -165,9 +165,15 @@ const OrderSummary = () => {
         </div>
       </div>
 
-      <button onClick={createOrder} className="w-full bg-accent text-white py-3 mt-5 rounded-lg font-semibold hover:bg-accent-light">
-         Place Order
-       </button>
+      {isSeller ? (
+        <div className="w-full bg-gray-200 text-gray-600 py-3 mt-5 rounded-lg font-semibold text-center">
+          Sellers cannot place orders
+        </div>
+      ) : (
+        <button onClick={createOrder} className="w-full bg-accent text-white py-3 mt-5 rounded-lg font-semibold hover:bg-accent-light">
+          Place Order
+        </button>
+      )}
     </div>
   );
 };
