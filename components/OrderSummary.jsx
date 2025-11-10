@@ -3,12 +3,22 @@ import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
-const OrderSummary = () => {
+// Initialize Stripe
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+const OrderSummaryContent = () => {
 
   const { currency, router, getCartCount, getCartAmount, getToken, user, cartItems, setCartItems, isSeller } = useAppContext()
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [clientSecret, setClientSecret] = useState("");
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const stripe = useStripe();
+  const elements = useElements();
 
   const [userAddresses, setUserAddresses] = useState([]);
 
@@ -34,48 +44,89 @@ const OrderSummary = () => {
     setIsDropdownOpen(false);
   };
 
-  const createOrder = async () => {
-   try {
-    
-    if (!selectedAddress) {
-      return toast.error('Please select an address')
+  const createPaymentIntent = async () => {
+    try {
+      const totalAmount = getCartAmount() + Math.floor(getCartAmount() * 0.02);
+      const { data } = await axios.post('/api/stripe/create-payment-intent', {
+        amount: totalAmount
+      });
+      setClientSecret(data.clientSecret);
+    } catch (error) {
+      toast.error('Failed to initialize payment');
+    }
+  };
+
+  const handlePayment = async (event) => {
+    event.preventDefault();
+
+    if (!stripe || !elements) {
+      return;
     }
 
-    let cartItemsArray = Object.keys(cartItems).map((key)=>({product:key, quantity:cartItems[key]}))
-    cartItemsArray = cartItemsArray.filter(item=> item.quantity > 0)
+    if (!selectedAddress) {
+      return toast.error('Please select an address');
+    }
+
+    let cartItemsArray = Object.keys(cartItems).map((key)=>({product:key, quantity:cartItems[key]}));
+    cartItemsArray = cartItemsArray.filter(item=> item.quantity > 0);
 
     if (cartItemsArray.length === 0) {
-     return toast.error('Cart is empty') 
+      return toast.error('Cart is empty');
     }
 
-    const token = await getToken()
+    setIsProcessing(true);
 
-    const {data} = await axios.post('/api/order/create', {
-      address: selectedAddress._id,
-      items: cartItemsArray
-    }, {
-      headers: {Authorization: `Bearer ${token}`}
-    })
+    try {
+      const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        }
+      });
 
-    if (data.success) {
-      toast.success(data.message)
-      setCartItems({})
-      router.push('/order-placed')
-    }else{
-      toast.error(data.message)
+      if (error) {
+        toast.error(error.message);
+        setIsProcessing(false);
+        return;
+      }
+
+      if (paymentIntent.status === 'succeeded') {
+        // Payment successful, create order
+        const token = await getToken();
+
+        const {data} = await axios.post('/api/order/create', {
+          address: selectedAddress._id,
+          items: cartItemsArray,
+          paymentIntentId: paymentIntent.id
+        }, {
+          headers: {Authorization: `Bearer ${token}`}
+        });
+
+        if (data.success) {
+          toast.success('Order placed successfully!');
+          setCartItems({});
+          router.push('/order-placed');
+        } else {
+          toast.error(data.message);
+        }
+      }
+    } catch (error) {
+      toast.error(error.message);
+    } finally {
+      setIsProcessing(false);
     }
-
-   } catch (error) {
-       toast.error(error.message)
-   }
-  }
+  };
 
   useEffect(() => {
     if (user) {
-       fetchUserAddresses(); 
+       fetchUserAddresses();
     }
-  
-  }, [user])
+  }, [user]);
+
+  useEffect(() => {
+    if (getCartCount() > 0) {
+      createPaymentIntent();
+    }
+  }, [cartItems]);
 
   return (
     <div className="w-full md:w-96 bg-gray-500/5 p-5">
@@ -143,6 +194,30 @@ const OrderSummary = () => {
           </div>
         </div>
 
+        <div>
+          <label className="text-base font-medium uppercase text-gray-600 block mb-2">
+            Payment Information
+          </label>
+          <div className="border p-3 rounded-lg bg-gray-50">
+            <CardElement
+              options={{
+                style: {
+                  base: {
+                    fontSize: '16px',
+                    color: '#424770',
+                    '::placeholder': {
+                      color: '#aab7c4',
+                    },
+                  },
+                  invalid: {
+                    color: '#9e2146',
+                  },
+                },
+              }}
+            />
+          </div>
+        </div>
+
         <hr className="border-gray-500/30 my-5" />
 
         <div className="space-y-4">
@@ -170,11 +245,25 @@ const OrderSummary = () => {
           Sellers cannot place orders
         </div>
       ) : (
-        <button onClick={createOrder} className="w-full bg-accent text-white py-3 mt-5 rounded-lg font-semibold hover:bg-accent-light">
-          Place Order
-        </button>
+        <form onSubmit={handlePayment}>
+          <button
+            type="submit"
+            disabled={!stripe || isProcessing || !clientSecret}
+            className="w-full bg-accent text-white py-3 mt-5 rounded-lg font-semibold hover:bg-accent-light disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isProcessing ? 'Processing...' : `Pay ${currency}${getCartAmount() + Math.floor(getCartAmount() * 0.02)}`}
+          </button>
+        </form>
       )}
     </div>
+  );
+};
+
+const OrderSummary = () => {
+  return (
+    <Elements stripe={stripePromise}>
+      <OrderSummaryContent />
+    </Elements>
   );
 };
 

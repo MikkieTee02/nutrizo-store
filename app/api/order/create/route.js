@@ -11,7 +11,7 @@ export async function POST(request) {
     try {
 
         const {userId} = getAuth(request)
-        const {address, items} = await request.json();
+        const {address, items, paymentIntentId} = await request.json();
 
         const isSeller = await authSeller(userId)
         if (isSeller) {
@@ -35,6 +35,8 @@ export async function POST(request) {
                 address,
                 items,
                 amount: amount + Math.floor(amount * 0.02),
+                paymentIntentId,
+                paymentStatus: 'Payment Successful',
                 date: Date.now()
             }
         })

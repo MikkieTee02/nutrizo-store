@@ -12,6 +12,7 @@ This repo includes both frontend and backend – contributors can improve featur
 -   User authentication with Clerk
 -   Seller dashboard for product management
 -   Shopping cart and order processing
+-   Secure payments with Stripe
 -   Product search and filtering
 -   Responsive design
 -   Reusable components
@@ -47,6 +48,8 @@ This repo includes both frontend and backend – contributors can improve featur
     CLOUDINARY_API_KEY=your_cloudinary_api_key
     CLOUDINARY_API_SECRET=your_cloudinary_api_secret
     INNGEST_SIGNING_KEY=your_inngest_signing_key
+    STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key_here
+    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key_here
     ```
 
 4. Run locally
