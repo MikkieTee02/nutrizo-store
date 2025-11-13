@@ -9,7 +9,6 @@ const AllProducts = () => {
 
   return (
     <>
-      <Navbar />
       <div className="flex flex-col items-center px-6 md:px-16 lg:px-32">
         <div className="flex flex-col items-end pt-12">
           <h2 className="text-3xl font-medium text-text-primary">
@@ -25,7 +24,6 @@ const AllProducts = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

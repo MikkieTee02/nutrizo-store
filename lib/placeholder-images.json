@@ -1,0 +1,76 @@
+{
+  "placeholderImages": [
+    {
+      "id": "about-hero",
+      "description": "A vibrant spread of healthy foods on a wooden table.",
+      "imageUrl": "/assets/about-hero.jpg",
+      "imageHint": "healthy food"
+    },
+    {
+      "id": "how-it-works-bg",
+      "description": "Top down view of brussels sprouts on a green background",
+      "imageUrl": "https://images.unsplash.com/photo-1604228741423-6e23c010c73a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdyZWVuJTIwZm9vZHxlbnwwfHx8fDE3NjM0MTE4NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brussels sprouts"
+    },
+    {
+      "id": "team-member-1",
+      "description": "Portrait of a smiling woman, a team member at Nutrizo.",
+      "imageUrl": "https://res.cloudinary.com/dmlavu7is/image/upload/v1762862614/1000078500_xdpxby.png",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Portrait of a man with glasses, a team member at Nutrizo.",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjI3MTQ3MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Headshot of a professional-looking woman, a team member at Nutrizo.",
+      "imageUrl": "https://images.unsplash.com/photo-1543207564-1271b510019d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "professional headshot"
+    },
+    {
+      "id": "product-1",
+      "description": "A delicious and healthy granola bar.",
+      "imageUrl": "https://images.unsplash.com/photo-1629214831802-bb2a07f9517e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxncmFub2xhJTIwYmFyfGVufDB8fHx8MTc2Mjc4OTM5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "granola bar"
+    },
+    {
+      "id": "product-2",
+      "description": "A refreshing bottle of fruit juice.",
+      "imageUrl": "https://images.unsplash.com/photo-1650547002676-7cd5dea3175e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxqdWljZSUyMGJvdHRsZXxlbnwwfHx8fDE3NjI3NjAwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "juice bottle"
+    },
+    {
+      "id": "product-3",
+      "description": "A collection of various healthy snacks.",
+      "imageUrl": "https://images.unsplash.com/photo-1569420067112-b57b4f024595?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwc25hY2tzfGVufDB8fHx8MTc2MjcwMTA3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthy snacks"
+    },
+    {
+      "id": "shop-for-good",
+      "description": "A collection of fresh green vegetables on a white background with a yellow accent.",
+      "imageUrl": "https://images.unsplash.com/photo-1583663848850-46af132dc08e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxncmVlbiUyMHZlZ2V0YWJsZXN8ZW58MHx8fHwxNzYyNzg5ODE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green vegetables"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "A woman holding half a grapefruit over her eye",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1668790366390-988fef927c42?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+      "imageHint": "woman grapefruit"
+    },
+    {
+      "id": "testimonial-bg-left",
+      "description": "Two orange slices and a green leaf",
+      "imageUrl": "https://images.unsplash.com/photo-1649088311431-9ffe92a4d4a4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=626",
+      "imageHint": "orange slices"
+    },
+    {
+      "id": "testimonial-bg-right",
+      "description": "Lemons and lemon slices with leaves on a white background",
+      "imageUrl": "https://images.unsplash.com/photo-1587494921937-14545cb38274?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsZW1vbnMlMjBzbGljZXMlMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzYzNzk2MjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lemon slices"
+    }
+  ]
+}

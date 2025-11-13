@@ -16,7 +16,6 @@ import Gallery from "@/components/Gallery";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <HeaderSlider />
       <div className="px-6 md:px-16 lg:px-20">
         <FeaturedCategories />
@@ -27,9 +26,8 @@ const Home = () => {
            </div>
         <Banner />
         <NewsLetter />
-   
+
        <Gallery/>
-      <Footer />
     </>
   );
 };
