@@ -29,7 +29,7 @@ const Navbar = () => {
         <Link href="/about-us" className="hover:text-primary transition-colors duration-200 font-medium">
           About Us
         </Link>
-        <Link href="/" className="hover:text-primary transition-colors duration-200 font-medium">
+        <Link href="/contact" className="hover:text-primary transition-colors duration-200 font-medium">
           Contact
         </Link>
     {isSeller && <button onClick={() => router.push('/seller')} className="text-sm border px-5 py-2 rounded-lg border-primary text-primary hover:bg-primary hover:text-white transition-all duration-200 font-semibold">Seller Dashboard</button>}

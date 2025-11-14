@@ -50,7 +50,7 @@ export function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="flex flex-col items-center">
               <div
-                className={`w-28 h-28 rounded-full flex items-center justify-center text-5xl font-bold mb-6 ${step.color} ${step.textColor} shadow-lg`}
+                className={`w-28 h-28 rounded-full flex items-center justify-center text-5xl font-bold mb-6 ${step.color} ${step.textColor} shadow-lg transition-transform duration-300 hover:scale-125`}
               >
                 {step.number}
               </div>
